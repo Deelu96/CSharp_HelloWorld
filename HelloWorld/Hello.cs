@@ -6,14 +6,21 @@ using System.Threading.Tasks;
 
 namespace HelloWorld
 {
-    class Program
+    class Hello
     {
         static void Main(string[] args)
         {
             Console.Out.WriteLine("Hello World!");
             String x, y = null;
+
             x = Console.ReadLine();
-            Console.Out.WriteLine("Hello : " + x);
+            
+            Person.setName(x);
+         
+            Console.Out.WriteLine("Hello : " + Person.getName());
+
+
+
             y = Console.ReadLine();
         }
     }
