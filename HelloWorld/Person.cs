@@ -8,16 +8,27 @@ namespace HelloWorld
 {
     class Person
     {
-        private static String name;
+        //fields
+        private  String firstName;
+        public  String LastName { get; set; }
+        public int Age { get; set; }
 
-        public static String getName()
+        //property_or_attribute
+        public  String GetFirstName()
         {
-            return name;
+            return this.firstName;
         }
 
-        public static void setName(String _name)
+        public  void SetFirstName(String _firstName)
         {
-            name = _name;
+            firstName = _firstName;
+        }
+
+        public void PrintData()
+        {
+            Console.Out.WriteLine("\n\nName : " + GetFirstName() + " " + LastName);
+            Console.Out.WriteLine("Age : " + Age);
+            Console.WriteLine("\n\n\nThank you!");
         }
     }
 }

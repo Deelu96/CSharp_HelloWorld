@@ -10,18 +10,23 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            Person person = new Person();
             Console.Out.WriteLine("Hello World!");
-            String x, y = null;
+            int age;
 
-            x = Console.ReadLine();
-            
-            Person.setName(x);
-         
-            Console.Out.WriteLine("Hello : " + Person.getName());
+            Console.Out.WriteLine("\n\nFirst Name : ");
+            String firstName = Console.ReadLine();
+            person.SetFirstName(firstName);
 
+            Console.Out.WriteLine("\nSecond Name : ");
+            String lastName = Console.ReadLine();
+            person.LastName = lastName;
 
+            Console.Out.WriteLine("\nAge : ");
+            age = Convert.ToInt32(Console.ReadLine());
+            person.Age = age;
 
-            y = Console.ReadLine();
+            person.PrintData();
         }
     }
 }
